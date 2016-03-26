@@ -107,7 +107,7 @@ public class ChunkPreGenUtil {
                                 if (task == null || task.cancel()) {
                                     src.sendMessage(Text.of("There is no chunk pre generation task running for the world " + world.getName() + "."));
                                 } else {
-                                    src.sendMessage(Text.of("Successfully cancelled the chunk pre generation task running for the world" +
+                                    src.sendMessage(Text.of("Successfully cancelled the chunk pre generation task running for the world " +
                                             world.getName() + "."));
                                 }
                                 return CommandResult.success();

@@ -2,6 +2,7 @@ package me.cybermaxke.chunkpregenutil;
 
 import static org.spongepowered.api.util.SpongeApiTranslationHelper.t;
 
+import com.flowpowered.math.GenericMath;
 import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import org.slf4j.Logger;
@@ -68,7 +69,7 @@ public class ChunkPreGenUtil {
                                         .valueFlag(new BoundedNumberCommandElement<>(GenericArguments.integer(Text.of(ARG_CHUNKS_PER_TICK)), null, 1),
                                                 "-chunksPerTick", "-cpt")
                                         .valueFlag(new BoundedNumberCommandElement<>(GenericArguments.doubleNum(Text.of(ARG_TICK_PERCENT_LIMIT)),
-                                                Float.MIN_VALUE, 1), "-tickPercentLimit", "-tpl")
+                                                1.0, GenericMath.DBL_EPSILON), "-tickPercentLimit", "-tpl")
                                         .buildWith(GenericArguments.none()))
                         .executor(new WorldCommandExecutor() {
                             @Override

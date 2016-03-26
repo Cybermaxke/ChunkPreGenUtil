@@ -1,0 +1,30 @@
+// Apply plugin
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+// Minimum version of Java required
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+// Basic project information
+group = 'cybermaxke'
+archivesBaseName = 'chunkpregenutil'
+version = '1.0.0-SNAPSHOT'
+
+// Repositories
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://repo.spongepowered.org/maven'
+    }
+}
+
+// Project dependencies
+dependencies {
+    compile 'org.spongepowered:spongeapi:4.0.0-SNAPSHOT'
+}
+
+jar {
+	classifier = 'release'
+}
